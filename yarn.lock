@@ -1209,6 +1209,10 @@
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.6.3.tgz#3f10514786aad846d74cd63cb693556309918f4b"
 
+"@firebase/app-types@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.7.0.tgz#c9e16d1b8bed1a991840b8d2a725fb58d0b5899f"
+
 "@firebase/app@0.6.30":
   version "0.6.30"
   resolved "https://registry.yarnpkg.com/@firebase/app/-/app-0.6.30.tgz#c7ff8c9c341e344366f510fcce7498d2e0fd5373"
@@ -1242,12 +1246,43 @@
     "@firebase/util" "1.3.0"
     tslib "^2.1.0"
 
+"@firebase/component@0.5.7":
+  version "0.5.7"
+  resolved "https://registry.yarnpkg.com/@firebase/component/-/component-0.5.7.tgz#a50c5fbd14a2136a99ade6f59f53498729c0f174"
+  dependencies:
+    "@firebase/util" "1.4.0"
+    tslib "^2.1.0"
+
+"@firebase/database-compat@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@firebase/database-compat/-/database-compat-0.1.1.tgz#9fe69e3bd3f71d29011bb6ca793f38edb65ca536"
+  dependencies:
+    "@firebase/component" "0.5.7"
+    "@firebase/database" "0.12.1"
+    "@firebase/database-types" "0.9.1"
+    "@firebase/logger" "0.3.0"
+    "@firebase/util" "1.4.0"
+    tslib "^2.1.0"
+
 "@firebase/database-types@0.8.0":
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.8.0.tgz#3cc8b292795ed268cd40a521f45a957b951189a5"
   dependencies:
     "@firebase/app-types" "0.6.3"
     "@firebase/util" "1.3.0"
+
+"@firebase/database-types@0.9.1":
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.9.1.tgz#0cab989e8154d812b535d80f23c1578b1d391f5f"
+  dependencies:
+    "@firebase/app-types" "0.7.0"
+    "@firebase/util" "1.4.0"
+
+"@firebase/database-types@^0.7.2":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.7.3.tgz#819f16dd4c767c864b460004458620f265a3f735"
+  dependencies:
+    "@firebase/app-types" "0.6.3"
 
 "@firebase/database@0.11.0":
   version "0.11.0"
@@ -1259,6 +1294,17 @@
     "@firebase/logger" "0.2.6"
     "@firebase/util" "1.3.0"
     faye-websocket "0.11.3"
+    tslib "^2.1.0"
+
+"@firebase/database@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@firebase/database/-/database-0.12.1.tgz#7e43f27ac4057858d5bd0dd371b134b304fecdb0"
+  dependencies:
+    "@firebase/auth-interop-types" "0.1.6"
+    "@firebase/component" "0.5.7"
+    "@firebase/logger" "0.3.0"
+    "@firebase/util" "1.4.0"
+    faye-websocket "0.11.4"
     tslib "^2.1.0"
 
 "@firebase/firestore-types@2.4.0":
@@ -1310,6 +1356,12 @@
 "@firebase/logger@0.2.6":
   version "0.2.6"
   resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.2.6.tgz#3aa2ca4fe10327cabf7808bd3994e88db26d7989"
+
+"@firebase/logger@0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@firebase/logger/-/logger-0.3.0.tgz#a3992e40f62c10276dbfcb8b4ab376b7e25d7fd9"
+  dependencies:
+    tslib "^2.1.0"
 
 "@firebase/messaging-types@0.5.0":
   version "0.5.0"
@@ -1384,6 +1436,12 @@
   dependencies:
     tslib "^2.1.0"
 
+"@firebase/util@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@firebase/util/-/util-1.4.0.tgz#81e985adba44b4d1f21ec9f5af9628d505891de8"
+  dependencies:
+    tslib "^2.1.0"
+
 "@firebase/webchannel-wrapper@0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.5.1.tgz#a64d1af3c62e3bb89576ec58af880980a562bf4e"
@@ -1405,6 +1463,15 @@
     google-auth-library "^7.0.2"
     retry-request "^4.2.2"
     teeny-request "^7.0.0"
+
+"@google-cloud/firestore@^4.5.0":
+  version "4.15.1"
+  resolved "https://registry.yarnpkg.com/@google-cloud/firestore/-/firestore-4.15.1.tgz#ed764fc76823ce120e68fe8c27ef1edd0650cd93"
+  dependencies:
+    fast-deep-equal "^3.1.1"
+    functional-red-black-tree "^1.0.1"
+    google-gax "^2.24.1"
+    protobufjs "^6.8.6"
 
 "@google-cloud/paginator@^3.0.0":
   version "3.0.6"
@@ -1445,7 +1512,7 @@
     lodash.snakecase "^4.1.1"
     p-defer "^3.0.0"
 
-"@google-cloud/storage@^5.8.3":
+"@google-cloud/storage@^5.3.0", "@google-cloud/storage@^5.8.3":
   version "5.14.4"
   resolved "https://registry.yarnpkg.com/@google-cloud/storage/-/storage-5.14.4.tgz#ead318c25299189fea5b3ed878556e553c92a28e"
   dependencies:
@@ -1922,6 +1989,10 @@
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/@opentelemetry/semantic-conventions/-/semantic-conventions-0.24.0.tgz#1028ef0e0923b24916158d80d2ddfd67ea8b6740"
 
+"@panva/asn1.js@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@panva/asn1.js/-/asn1.js-1.0.0.tgz#dd55ae7b8129e02049f009408b97c61ccf9032f6"
+
 "@pmmmwh/react-refresh-webpack-plugin@0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.4.3.tgz#1eec460596d200c0236bf195b078a5d1df89b766"
@@ -2330,13 +2401,35 @@
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
 
-"@types/express-serve-static-core@*":
+"@types/express-jwt@0.0.42":
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/@types/express-jwt/-/express-jwt-0.0.42.tgz#4f04e1fadf9d18725950dc041808a4a4adf7f5ae"
+  dependencies:
+    "@types/express" "*"
+    "@types/express-unless" "*"
+
+"@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.18":
   version "4.17.24"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.24.tgz#ea41f93bf7e0d59cd5a76665068ed6aab6815c07"
   dependencies:
     "@types/node" "*"
     "@types/qs" "*"
     "@types/range-parser" "*"
+
+"@types/express-unless@*":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@types/express-unless/-/express-unless-0.5.2.tgz#07e29883d280778588644b03563d8796f870f20e"
+  dependencies:
+    "@types/express" "*"
+
+"@types/express@*":
+  version "4.17.13"
+  resolved "https://registry.yarnpkg.com/@types/express/-/express-4.17.13.tgz#a76e2995728999bab51a33fabce1d705a3709034"
+  dependencies:
+    "@types/body-parser" "*"
+    "@types/express-serve-static-core" "^4.17.18"
+    "@types/qs" "*"
+    "@types/serve-static" "*"
 
 "@types/express@4.17.3":
   version "4.17.3"
@@ -4348,7 +4441,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-env@^7.0.2:
+cross-env@^7.0.2, cross-env@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
   dependencies:
@@ -4752,7 +4845,7 @@ debug@2, debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
+debug@4, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2:
   version "4.3.2"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
   dependencies:
@@ -4904,6 +4997,12 @@ detective@^5.2.0:
     acorn-node "^1.6.1"
     defined "^1.0.0"
     minimist "^1.1.1"
+
+dicer@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/dicer/-/dicer-0.3.0.tgz#eacd98b3bfbf92e8ab5c2fdb71aaac44bb06b872"
+  dependencies:
+    streamsearch "0.1.2"
 
 didyoumean@^1.2.2:
   version "1.2.2"
@@ -5754,7 +5853,7 @@ faye-websocket@0.11.3:
   dependencies:
     websocket-driver ">=0.5.1"
 
-faye-websocket@^0.11.3:
+faye-websocket@0.11.4, faye-websocket@^0.11.3:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.11.4.tgz#7f0d9275cfdd86a1c963dc8b65fcc451edcbb1da"
   dependencies:
@@ -5890,7 +5989,22 @@ find-up@^3.0.0:
   dependencies:
     locate-path "^3.0.0"
 
-firebase-functions@^3.14.1:
+firebase-admin@^9.12.0:
+  version "9.12.0"
+  resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-9.12.0.tgz#d7e889e97c9c31610efbcd131bb6d06a783af757"
+  dependencies:
+    "@firebase/database-compat" "^0.1.1"
+    "@firebase/database-types" "^0.7.2"
+    "@types/node" ">=12.12.47"
+    dicer "^0.3.0"
+    jsonwebtoken "^8.5.1"
+    jwks-rsa "^2.0.2"
+    node-forge "^0.10.0"
+  optionalDependencies:
+    "@google-cloud/firestore" "^4.5.0"
+    "@google-cloud/storage" "^5.3.0"
+
+firebase-functions@^3.15.7:
   version "3.15.7"
   resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.15.7.tgz#ac88657e7e28f5a5926d41ae3e8fae9c94621ccd"
   dependencies:
@@ -7761,6 +7875,12 @@ jest@26.6.0:
     import-local "^3.0.2"
     jest-cli "^26.6.0"
 
+jose@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-2.0.5.tgz#29746a18d9fff7dcf9d5d2a6f62cb0c7cd27abd3"
+  dependencies:
+    "@panva/asn1.js" "^1.0.0"
+
 jquery-mousewheel@^3.1.13:
   version "3.1.13"
   resolved "https://registry.yarnpkg.com/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz#06f0335f16e353a695e7206bf50503cb523a6ee5"
@@ -8013,6 +8133,16 @@ jwa@^2.0.0:
     ecdsa-sig-formatter "1.0.11"
     safe-buffer "^5.0.1"
 
+jwks-rsa@^2.0.2:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/jwks-rsa/-/jwks-rsa-2.0.4.tgz#59d95e39f300783a8582ef8aa37d5ebbc6a8aa6f"
+  dependencies:
+    "@types/express-jwt" "0.0.42"
+    debug "^4.3.2"
+    jose "^2.0.5"
+    limiter "^1.1.5"
+    lru-memoizer "^2.1.4"
+
 jws@^3.2.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/jws/-/jws-3.2.2.tgz#001099f3639468c9414000e99995fa52fb478304"
@@ -8112,6 +8242,10 @@ levn@~0.3.0:
 lilconfig@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.3.tgz#68f3005e921dafbd2a2afb48379986aa6d2579fd"
+
+limiter@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/limiter/-/limiter-1.1.5.tgz#8f92a25b3b16c6131293a0cc834b4a838a2aa7c2"
 
 lines-and-columns@^1.1.6:
   version "1.1.6"
@@ -8319,6 +8453,20 @@ lru-cache@^6.0.0:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
   dependencies:
     yallist "^4.0.0"
+
+lru-cache@~4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
+  dependencies:
+    pseudomap "^1.0.1"
+    yallist "^2.0.0"
+
+lru-memoizer@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/lru-memoizer/-/lru-memoizer-2.1.4.tgz#b864d92b557f00b1eeb322156a0409cb06dafac6"
+  dependencies:
+    lodash.clonedeep "^4.5.0"
+    lru-cache "~4.0.0"
 
 magic-string@^0.25.0, magic-string@^0.25.7:
   version "0.25.7"
@@ -8709,6 +8857,12 @@ negotiator@0.6.2:
 neo-async@^2.5.0, neo-async@^2.6.1, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
+
+next-routes@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/next-routes/-/next-routes-1.4.2.tgz#736a382579a792ea69f35ae70b449acdfefa7944"
+  dependencies:
+    path-to-regexp "^2.1.0"
 
 next-tick@~1.0.0:
   version "1.0.0"
@@ -9381,6 +9535,10 @@ path-to-regexp@^1.7.0:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
   dependencies:
     isarray "0.0.1"
+
+path-to-regexp@^2.1.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-2.4.0.tgz#35ce7f333d5616f1c1e1bfe266c3aba2e5b2e704"
 
 path-type@^1.0.0:
   version "1.1.0"
@@ -10234,7 +10392,7 @@ proto3-json-serializer@^0.1.1:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/proto3-json-serializer/-/proto3-json-serializer-0.1.4.tgz#aa2dc4c9c9b7ea05631354b2c2e52c227539a7f0"
 
-protobufjs@6.11.2, protobufjs@^6.10.0:
+protobufjs@6.11.2, protobufjs@^6.10.0, protobufjs@^6.8.6:
   version "6.11.2"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.2.tgz#de39fabd4ed32beaa08e9bb1e30d08544c1edf8b"
   dependencies:
@@ -10262,6 +10420,10 @@ proxy-addr@~2.0.5:
 prr@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/prr/-/prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476"
+
+pseudomap@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
 psl@^1.1.28, psl@^1.1.33:
   version "1.8.0"
@@ -12022,6 +12184,10 @@ stream-shift@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.1.tgz#d7088281559ab2778424279b0877da3c392d5a3d"
 
+streamsearch@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/streamsearch/-/streamsearch-0.1.2.tgz#808b9d0e56fc273d809ba57338e929919a1a9f1a"
+
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
@@ -13490,6 +13656,10 @@ y18n@^4.0.0:
 y18n@^5.0.5:
   version "5.0.8"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
+
+yallist@^2.0.0:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
 
 yallist@^3.0.2:
   version "3.1.1"
